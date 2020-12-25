@@ -1,0 +1,19 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin: auto;
+}
+.anime_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+button {
+  cursor: pointer;
+  background-color: #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  margin: 1rem 0.3rem;
+}
