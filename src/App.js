@@ -51,7 +51,7 @@ export default function App() {
       <h1>BonitoFlakes Anime Recommendation</h1>
       <div className="anime_button">
         {Object.keys(animeDB).map((item) => (
-          <button onClick={() => clickHandler(item)} className={item}>
+          <button onClick={() => clickHandler(item)} key={item}>
             {item}
           </button>
         ))}
