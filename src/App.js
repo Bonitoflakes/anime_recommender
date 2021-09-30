@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 
 const animeDB = {
-  noobie: [
+  noob: [
     { name: "Naruto", rating: "4/5" },
     { name: "Naruto Shippuden", rating: "5/5" }
   ],
@@ -41,7 +41,7 @@ const animeDB = {
 };
 
 export default function App() {
-  const [selectedGenre, setGenre] = useState("noobie");
+  const [selectedGenre, setGenre] = useState("noob");
 
   function clickHandler(genre) {
     setGenre(genre);
@@ -49,7 +49,6 @@ export default function App() {
   return (
     <div className="App">
       <h1>BonitoFlakes Anime Recommendation</h1>
-      {/*  */}
       <div className="anime_button">
         {Object.keys(animeDB).map((item) => (
           <button onClick={() => clickHandler(item)} className={item}>
@@ -60,9 +59,9 @@ export default function App() {
       {/*  */}
       <div>
         <ul>
-          {animeDB[selectedGenre].map((book) => (
+          {animeDB[selectedGenre].map((anime) => (
             <li
-              key={book.name}
+              key={anime.name}
               style={{
                 listStyle: "none",
                 padding: "1rem",
@@ -73,10 +72,10 @@ export default function App() {
               }}
             >
               <div style={{ fontSize: "larger", textAlign: "left" }}>
-                {book.name}
+                {anime.name}
               </div>
               <div style={{ fontSize: "smaller", textAlign: "left" }}>
-                {book.rating}
+                {anime.rating}
               </div>
             </li>
           ))}
